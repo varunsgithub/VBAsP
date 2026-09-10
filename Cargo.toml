@@ -1,0 +1,23 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.dependencies]
+rand = "0.10.2"
+serde = { version = "1.0", features = ["derive"] }
+
+# Profiles
+# Max performance with release builds (cargo build --release)
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+
+# Faster dev builds (cargo build)
+[profile.dev]
+opt-level = 1
+
+# Optional: keep external dependencies fully optimized even in debug mode
+[profile.dev.package."*"]
+opt-level = 3

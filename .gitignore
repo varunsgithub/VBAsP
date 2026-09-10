@@ -1,1 +1,13 @@
+#Folders
 DevDocs
+target
+
+#Extensions
+*.lock
+*.vscode
+*.bin 
+*.rom
+*.gba
+*.gb
+
+#Files
