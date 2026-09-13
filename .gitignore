@@ -9,5 +9,7 @@ target
 *.rom
 *.gba
 *.gb
+*.DS_Store
+.DS_Store
 
 #Files
